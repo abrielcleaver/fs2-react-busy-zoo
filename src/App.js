@@ -25,9 +25,9 @@ function App() {
             {/* the width of the lion should be ten times whatever the lion size is in state */}
             <div className="buttons">
               {/* when you click this button, the lion's size in state should go up by one */}
-              <button>The lion is growing</button>
+              <button onClick={() => setLionSize(lionSize + 1)}>The lion is growing</button>
               {/* when you click this button, the lion's size in state should go down by one */}
-              <button>The lion is shrinking</button>
+              <button onClick={() => setLionSize(lionSize - 1)}>The lion is shrinking</button>
             </div>
           </div>
         </div>
