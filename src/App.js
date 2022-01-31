@@ -16,9 +16,9 @@ function App() {
           {/* the width of the unicorn should be ten times whatever the unicorn size is in state */}
           <div className="buttons">
             {/* when you click this button, the unicorn's size in state should go up by one */}
-            <button>The unicorn is growing</button>
+            <button onClick={() => setUnicornSize(unicornSize + 1)}>The unicorn is growing</button>
             {/* when you click this button, the unicorn's size in state should go down by one */}
-            <button>The unicorn is shrinking</button>
+            <button onClick={() => setUnicornSize(unicornSize - 1)}>The unicorn is shrinking</button>
           </div>
           <div className="animal">
             <img src="lion.png" width={10 * lionSize} />
