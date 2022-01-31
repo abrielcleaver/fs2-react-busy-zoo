@@ -1,11 +1,15 @@
 import './App.css';
 import { useState } from 'react';
+import Parade from './Components/Parade';
+
+
 // App(): sets up & renders initial state for `isOpen`, `unicornSize`, `lionSize`, and `animals`
 // App(): `isOpen`, `unicornSize`, `lionSize`, and `animals all change on button clicks 
 function App() {
   // const [isOpen, setIsOpen] = useState('open');
   const [unicornSize, setUnicornSize] = useState(10);
   const [lionSize, setLionSize] = useState(10);
+  const [parade, setParade] = useState(['cheetah', 'elephant', 'zebra', 'gorilla']);
 
 
   return (
@@ -31,6 +35,18 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      {/* 
+      the Parade component takes in one prop: animals
+      this prop should be an array of strings like ['lion', 'elephant', 'zebra', 'gorilla'].
+      */}
+      <Parade animals={parade} />
+      <div className='buttons'>
+        {/* On click, you should set the parade in state to be a copy of the same array that's already in state, but immutably add an animal to the end > 'cheetah' */}
+        <button onClick={() => setParade([...parade, 'cheetah'])}>Cheetah</button>
+        <button onClick={() => setParade([...parade, 'elephant'])}>Elephant</button>
+        <button onClick={() => setParade([...parade, 'zebra'])}>Zebra</button>
+        <button onClick={() => setParade([...parade, 'gorilla'])}>Gorilla</button>
       </div>
     </div>
   );
