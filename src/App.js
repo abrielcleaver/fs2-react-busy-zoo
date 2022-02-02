@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import Parade from './Components/Parade';
-
+import Sign from './Components/Sign';
 
 // App(): sets up & renders initial state for `isOpen`, `unicornSize`, `lionSize`, and `animals`
 // App(): `isOpen`, `unicornSize`, `lionSize`, and `animals all change on button clicks 
@@ -10,7 +10,7 @@ function App() {
   const [unicornSize, setUnicornSize] = useState(10);
   const [lionSize, setLionSize] = useState(10);
   const [parade, setParade] = useState(['cheetah', 'elephant', 'zebra', 'gorilla']);
-
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="App">
@@ -34,6 +34,13 @@ function App() {
               <button onClick={() => setLionSize(lionSize - 1)}>The lion is shrinking</button>
             </div>
           </div>
+        </div>
+      </div>
+      <div>
+        <Sign isOpen={isOpen} />
+        <div>
+          <button onClick={() => setIsOpen(false)}>Open the Zoo</button>
+          <button onClick={() => setIsOpen(true)}>Close the Zoo</button>
         </div>
       </div>
       {/* 
