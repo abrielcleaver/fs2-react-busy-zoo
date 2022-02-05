@@ -39,8 +39,8 @@ function App() {
       <div>
         <Sign isOpen={isOpen} />
         <div>
-          <button onClick={() => setIsOpen(false)}>Open the Zoo</button>
-          <button onClick={() => setIsOpen(true)}>Close the Zoo</button>
+          <button onClick={() => setIsOpen(true)}>Open the Zoo</button>
+          <button onClick={() => setIsOpen(false)}>Close the Zoo</button>
         </div>
       </div>
       {/* 
